@@ -1,0 +1,352 @@
+body {
+    margin: auto;
+}
+.headerKasa {
+    font-size: 68px;
+    color: #ff6060;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 45px;
+}
+.headerKasa div {
+    font-size: 24px;
+    display: flex;
+    justify-content: space-around;
+    width: 309px;
+}
+.headerKasa div a {
+    color: #ff6060;
+    text-decoration: none;
+    padding-top: 34px;
+}
+.ImageKasa1 {
+    padding-top: 25px;
+}
+.ImageKasa2 {
+    margin-top: 50px;
+}
+.pmain {
+    margin-left: 25px;
+    color: #ffffff;
+    font-size: 48px;
+    width: 98%;
+    border-radius: 25px;
+    height: 175px;
+    padding-top: 125px;
+    background-image: url("../public/image/ImageMain.png");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.ImageMain {
+    width: 98%;
+    border-radius: 25px;
+    height: 300px;
+    margin: 25px 0px 25px 0px;
+    object-fit: cover;
+}
+.mainDIV {
+    background-color: #f6f6f6;
+    max-width: 99%;
+    border-radius: 25px;
+    margin: 25px 25px 0px 25px;
+    padding-left: 14%;
+    padding-bottom: 25px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+.cartMainDiv {
+    width: 340px;
+    height: 340px;
+    margin-top: 25px;
+    border-radius: 15px;
+    color: white;
+}
+.cartMainDiv p {
+    position: relative;
+    text-align: left;
+    top: 268px;
+    left: 20px;
+    font-size: 18px;
+}
+.error404,
+.Perror404,
+.Perror4042 {
+    color: #ff6060;
+    text-align: center;
+}
+.error404 {
+    font-size: 288px;
+}
+.Perror404 {
+    font-size: 36px;
+}
+.Perror4042 {
+    font-size: 18px;
+    text-decoration: none;
+}
+.divCardHeader {
+    width: 98%;
+    margin-left: 25px;
+    display: flex;
+    justify-content: space-between;
+    color: #ff6060;
+}
+.divCardDescriptionGeneral {
+    display: flex;
+    justify-content: space-around;
+}
+.divCardDescription {
+    text-align: left;
+    padding: 0.25px 0.25px 0.25px 0px;
+    width: 48%;
+}
+.divCardDescription1 {
+    background-color: #ff6060;
+    color: white;
+    border-radius: 7.5px;
+    padding: 0.25px 0.25px 0.25px 0.25px;
+    position: relative;
+    z-index: 1;
+    display: flex;
+    justify-content: space-between;
+}
+.iconDescription {
+    margin-top: 17.5px;
+    margin-right: 15px;
+    /*transform: rotate(0deg);*/
+}
+.divCardDescription h2 {
+    margin-left: 15px;
+}
+.divCardDescriptionUnder {
+    display: none;
+    transform: translateY(0px);
+    background-color: #f6f6f6;
+    color: #ff6060;
+    margin-top: -10px;
+    position: relative;
+    z-index: auto;
+    font-size: 20px;
+    padding: 0.25px 0.25px 0.25px 0.25px;
+    padding-left: 15px;
+    border-radius: 7.5px;
+}
+.pLocation {
+    margin-top: -15px;
+}
+.namehost {
+    font-size: 18px;
+    margin-right: 10px;
+}
+.pictureHost {
+    margin-left: 10px;
+    border-radius: 50%;
+    width: 64px;
+    height: 64px;
+}
+.tagsDivP {
+    color: #ffffff;
+    display: flex;
+    width: 40%;
+}
+.tagDivP {
+    background-color: #ff6060;
+    border-radius: 7.5px;
+    padding: 5px 5px 5px 5px;
+    margin-right: 10px;
+}
+
+.tagsDivI {
+    width: 40%;
+}
+.tagsDiv {
+    width: 98%;
+    margin-left: 25px;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.nameHostApartment {
+    display: flex;
+    /*justify-content: space-around;*/
+}
+.CarouselImageCard {
+    background-size: 100%;
+    background-repeat: no-repeat;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-radius: 25px;
+    width: 98%;
+    height: 415px;
+    margin-left: 25px;
+    position: relative;
+}
+.pCarousel {
+    color: #ffffff;
+    position: relative;
+    bottom: -225px;
+}
+.iconCarrouselPrevious,
+.iconCarrouselNext {
+    position: relative;
+    bottom: -33%;
+}
+.iconCarrouselPrevious {
+    right: 45%;
+}
+.iconCarrouselNext {
+    left: 45%;
+}
+.DivByTheWay1 {
+    background-color: #ff6060;
+    color: white;
+    position: relative;
+    z-index: 1;
+    text-align: left;
+    width: 98%;
+    margin-left: 25px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding: 0.25px 0px 0.25px 0px;
+    border-radius: 7.5px;
+    display: flex;
+    justify-content: space-between;
+}
+.DivByTheWay1 h2 {
+    margin-left: 10px;
+}
+.DivByTheWay2 {
+    transform: translateY(0px);
+    display: none;
+    background-color: #f6f6f6;
+    color: #ff6060;
+    position: relative;
+    z-index: auto;
+    text-align: left;
+    width: 98%;
+    margin-left: 25px;
+    margin-top: -25px;
+    font-size: 20px;
+    padding: 0.25px 0px 0.25px 0px;
+    border-radius: 7.5px;
+}
+.DivByTheWay2 p {
+    margin-left: 10px;
+}
+@keyframes none {
+    0% {
+        transform: translateY(2.5px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+}
+@keyframes block {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(2.5px);
+        opacity: 1;
+    }
+}
+.footerKasa {
+    margin-top: 50px;
+    background-color: black;
+    color: white;
+    height: 209px;
+    text-align: center;
+    width: 100%;
+}
+.footerKasa .plow3944p {
+    font-size: 39.44px;
+    vertical-align: middle;
+}
+.footerKasa .plow24p {
+    font-size: 24px;
+    vertical-align: middle;
+}
+@media screen and (max-width: 767px) {
+    .headerKasa {
+        padding-left: 25px;
+    }
+    .headerKasa div a {
+        font-size: 12px;
+        padding-top: 40px;
+    }
+    .ImageKasa1 {
+        height: 46.88px;
+        width: 145px;
+    }
+    .mainDIV {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0px 40px 0px 25px;
+    }
+    .pmain {
+        margin-left: 17.5px;
+        width: 88%;
+        background-position: 0px;
+        padding-top: 25px;
+        padding-bottom: 50px;
+    }
+    .cartMainDiv {
+        width: 230px;
+        height: 230px;
+        margin-right: 45px;
+    }
+    .cartMainDiv p {
+        position: relative;
+        top: 168px;
+    }
+    .divCardDescriptionGeneral {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .divCardDescription {
+        text-align: left;
+        padding: 0.25px 0.25px 0.25px 0px;
+        margin-bottom: 15px;
+        width: 88%;
+    }
+    .DivByTheWay1,
+    .DivByTheWay2 {
+        max-width: 92%;
+        margin-left: 12.5px;
+    }
+    .CarouselImageCard {
+        width: 92%;
+        background-size: 100% 100%;
+        margin-left: 7.5px;
+    }
+    .iconCarrouselPrevious {
+        right: 25%;
+    }
+
+    .iconCarrouselNext {
+        left: 25%;
+    }
+    .divCardHeader,
+    .tagsDiv {
+        margin-left: 0px;
+        justify-content: space-around;
+    }
+    .pictureHost {
+        margin-left: 0px;
+    }
+    .Rating,
+    .UnRating {
+        width: 18px;
+        height: 18px;
+    }
+    .footerKasa .plow24p {
+        font-size: 12px;
+    }
+}
