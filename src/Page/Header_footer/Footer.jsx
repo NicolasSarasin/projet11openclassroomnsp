@@ -1,4 +1,4 @@
-//import "C:/Users/nicol/Documents/Projet/openclassroom/p11/p11/src/style.css";
+import "../../style.css";
 
 function Footer() {
     return (
