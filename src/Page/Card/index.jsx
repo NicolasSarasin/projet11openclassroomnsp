@@ -10,50 +10,48 @@ import { useParams } from "react-router-dom";
 /*import React from "react";
 import ReactDOM from "react-dom/client";*/
 //import "@fortawesome/fontawesome-free/css/all.min.css";
-function display(eltid) {
-    const displayDiv = document.getElementById(eltid); //fonction alors que c'est différent d'une fonction
+function display(eltid, iconId) {
+    const displayDiv = document.getElementById(eltid);
+    const Icon = document.getElementById(iconId);
+    //const iconAlternate="";
     console.log("Button Clicked");
+    //switch case with display css in jsx
+    //displayDiv.style.display="none";
     switch (displayDiv.style.display) {
         case "block":
             displayDiv.style.display = "";
             displayDiv.style.transform = "translateY(0px)";
             displayDiv.style.animation = "none 1s";
+            Icon.style.transform = "rotate(0deg)";
+            Icon.style.marginTop = "17.5px";
             break;
         default:
             displayDiv.style.display = "block";
             displayDiv.style.transform = "translateY(2.5px)";
             displayDiv.style.animation = "block 1s";
+            Icon.style.transform = "rotate(180deg)";
+            Icon.style.marginBottom = "17.5px";
     }
 }
-function changeImagenext(eltImage) {
-    const nextImage = eltImage;
-    //const Image = "";
-    if (nextImage) {
-        //si l'image est à n/n alors l'image est à 1/n
-        //return(<p>n/n image</p>)
-        /*Image = (Image + 1) % longueur du tableau d'image;
-        Card();*/
-    }
-    console.log("The next image");
-}
-function changeImageprevious(eltImage) {
-    const previousImage = eltImage;
-    //const Image = "";
-    if (previousImage) {
-        //si l'image est à 1/n alors l'image est à n/n
-        //return(<p>1/n image</p>)
-        /*Image =
-            (Image + longueur du tableau d'image - 1) %
-            longueur du tableau d'image;
-        Card();*/
-    }
-    console.log("The previous image");
-}
+
 function Card() {
     const { id } = useParams();
     const navigate = useNavigate();
     const [apartment, setApartment] = useState(null);
-    let [count, setCount] = useState(0);
+    const [pictureIndex, setPictureIndex] = useState(0);
+
+    const imageNext = () => {
+        //let pCarousel = document.getElementById("pCarousel");
+        setPictureIndex((pictureIndex + 1) % apartment.pictures.length);
+    };
+
+    const imagePrevious = () => {
+        //let pCarousel = document.getElementById("pCarousel");
+        setPictureIndex(
+            (pictureIndex + apartment.pictures.length - 1) %
+                apartment.pictures.length
+        );
+    };
     useEffect(() => {
         const foundApartment = data.find((item) => item.id === id);
         if (foundApartment === undefined) {
@@ -66,7 +64,6 @@ function Card() {
         // If apartment is not found, the useEffect will handle the redirection, so you can just return null here
         return null;
     }
-    let pictureIndex = 0;
     return (
         <div className="App">
             <Header />
@@ -78,13 +75,9 @@ function Card() {
                 }}
             >
                 <i
-                    key={count}
+                    key={"pervious_icon"}
                     className="iconCarrouselPrevious"
-                    onClick={() =>
-                        changeImageprevious(
-                            apartment.pictures[pictureIndex.setCount(--count)]
-                        )
-                    }
+                    onClick={imagePrevious}
                 >
                     <img
                         src="./image/arrow_back_ios-24px 1.png"
@@ -93,13 +86,9 @@ function Card() {
                     />
                 </i>
                 <i
-                    key={count}
+                    key={"next_icon"}
                     className="iconCarrouselNext"
-                    onClick={() =>
-                        changeImagenext(
-                            apartment.pictures[pictureIndex.setCount(++count)]
-                        )
-                    }
+                    onClick={imageNext}
                 >
                     <img
                         src="./image/arrow_forward_ios-24px 1.png"
@@ -107,8 +96,8 @@ function Card() {
                         id="nextImage"
                     />
                 </i>
-                <p className="pCarousel">
-                    1/5(Je mettrais le nombre d'image sur le total après).
+                <p className="pCarousel" id="pCarousel">
+                    {pictureIndex + 1}/{apartment.pictures.length}
                 </p>
             </div>
             <div className="divCardHeader">
@@ -128,7 +117,7 @@ function Card() {
             <div className="tagsDiv">
                 <div className="tagsDivP">
                     {apartment.tags.map((tag, index) => (
-                        <p className="tagDivP" key={index}>
+                        <p className="tagDivP" key={"tag" + index}>
                             {tag}
                         </p>
                     ))}
@@ -207,7 +196,10 @@ function Card() {
                         <h2>Description</h2>
                         <i
                             className="iconDescription"
-                            onClick={() => display("locationDetails")}
+                            id="LocationIcon"
+                            onClick={() =>
+                                display("locationDetails", "LocationIcon")
+                            }
                         >
                             <img
                                 src="./image/arrow_back_ios-24px 2.png"
@@ -227,7 +219,10 @@ function Card() {
                         <h2>Équipements</h2>
                         <i
                             className="iconDescription"
-                            onClick={() => display("EquipmentDetails")}
+                            id="EquipmentIcon"
+                            onClick={() =>
+                                display("EquipmentDetails", "EquipmentIcon")
+                            }
                         >
                             <img
                                 src="./image/arrow_back_ios-24px 2.png"
@@ -240,7 +235,7 @@ function Card() {
                         className="divCardDescriptionUnder"
                     >
                         {apartment.equipments.map((equipment, index) => (
-                            <p key={index}>{equipment}</p>
+                            <p key={"equipment" + index}>{equipment}</p>
                         ))}
                     </div>
                 </div>

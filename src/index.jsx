@@ -6,9 +6,9 @@ import Footer from "./Page/Header_footer/Footer.jsx";
 /*import ReactDOM from "react-dom/client";
 <FontAwesomeIcon icon={["fab", "github"]}/>*/
 //import "@fortawesome/fontawesome-free/css/all.min.css";
-function display(eltid) {
+function display(eltid, iconId) {
     const displayDiv = document.getElementById(eltid);
-    //const Icon = document.getElementById("iconDescription");
+    const Icon = document.getElementById(iconId);
     //const iconAlternate="";
     console.log("Button Clicked");
     //switch case with display css in jsx
@@ -18,13 +18,15 @@ function display(eltid) {
             displayDiv.style.display = "";
             displayDiv.style.transform = "translateY(0px)";
             displayDiv.style.animation = "none 1s";
-            //Icon.style.transform = "rotate(0deg)";
+            Icon.style.transform = "rotate(0deg)";
+            Icon.style.marginTop = "17.5px";
             break;
         default:
             displayDiv.style.display = "block";
             displayDiv.style.transform = "translateY(2.5px)";
             displayDiv.style.animation = "block 1s";
-        //Icon.style.transform = "rotate(180deg)";
+            Icon.style.transform = "rotate(180deg)";
+            Icon.style.marginBottom = "17.5px";
     }
 }
 function Index() {
@@ -40,8 +42,10 @@ function Index() {
                 <h2>Fiabilité</h2>
                 <i
                     className="iconDescription"
-                    id="iconDescription"
-                    onClick={() => display("FiablilityDetails")}
+                    id="FiabilityIcon"
+                    onClick={() =>
+                        display("FiablilityDetails", "FiabilityIcon")
+                    }
                 >
                     <img src="./image/arrow_back_ios-24px 2.png" alt="arrow" />
                 </i>
@@ -58,8 +62,8 @@ function Index() {
                 <h2>Respect</h2>
                 <i
                     className="iconDescription"
-                    id="iconDescription"
-                    onClick={() => display("RespectDetails")}
+                    id="RespectIcon"
+                    onClick={() => display("RespectDetails", "RespectIcon")}
                 >
                     <img src="./image/arrow_back_ios-24px 2.png" alt="arrow" />
                 </i>
@@ -75,8 +79,8 @@ function Index() {
                 <h2>Service</h2>
                 <i
                     className="iconDescription"
-                    id="iconDescription"
-                    onClick={() => display("ServiceDetails")}
+                    id="ServiceIcon"
+                    onClick={() => display("ServiceDetails", "ServiceIcon")}
                 >
                     <img src="./image/arrow_back_ios-24px 2.png" alt="arrow" />
                 </i>
@@ -92,8 +96,8 @@ function Index() {
                 <h2>Sécurité</h2>
                 <i
                     className="iconDescription"
-                    id="iconDescription"
-                    onClick={() => display("SecurityDetails")}
+                    id="SecurityIcon"
+                    onClick={() => display("SecurityDetails", "SecurityIcon")}
                 >
                     <img src="./image/arrow_back_ios-24px 2.png" alt="arrow" />
                 </i>

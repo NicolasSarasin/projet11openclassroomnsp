@@ -59,6 +59,7 @@ body {
 .cartMainDiv {
     width: 340px;
     height: 340px;
+    background-position: center;
     margin-top: 25px;
     border-radius: 15px;
     color: white;
@@ -173,25 +174,26 @@ body {
     /*justify-content: space-around;*/
 }
 .CarouselImageCard {
-    background-size: 100%;
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
     margin-top: 25px;
     margin-bottom: 15px;
     border-radius: 25px;
     width: 98%;
-    height: 415px;
+    height: 830px;
     margin-left: 25px;
     position: relative;
 }
 .pCarousel {
     color: #ffffff;
     position: relative;
-    bottom: -225px;
+    bottom: -600px;
 }
 .iconCarrouselPrevious,
 .iconCarrouselNext {
     position: relative;
-    bottom: -33%;
+    bottom: -45%;
 }
 .iconCarrouselPrevious {
     right: 45%;
@@ -323,8 +325,14 @@ body {
     }
     .CarouselImageCard {
         width: 92%;
+        height: 415px;
         background-size: 100% 100%;
-        margin-left: 7.5px;
+        margin-left: 12.5px;
+    }
+    .iconCarrouselPrevious,
+    .iconCarrouselNext {
+        position: relative;
+        bottom: -40%;
     }
     .iconCarrouselPrevious {
         right: 25%;
@@ -333,13 +341,18 @@ body {
     .iconCarrouselNext {
         left: 25%;
     }
+    .pCarousel {
+        color: #ffffff;
+        position: relative;
+        bottom: -225px;
+    }
     .divCardHeader,
     .tagsDiv {
         margin-left: 0px;
         justify-content: space-around;
     }
     .pictureHost {
-        margin-left: 0px;
+        margin-left: 5px;
     }
     .Rating,
     .UnRating {
@@ -348,5 +361,36 @@ body {
     }
     .footerKasa .plow24p {
         font-size: 12px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1920px) {
+    .pmain {
+        width: 96.5%;
+    }
+    .mainDIV {
+        margin-left: 25px;
+        padding-left: 3.5%;
+    }
+    .CarouselImageCard {
+        width: 97%;
+        height: 415px;
+    }
+    .iconCarrouselPrevious,
+    .iconCarrouselNext {
+        position: relative;
+        bottom: -33%;
+    }
+    .pCarousel {
+        color: #ffffff;
+        position: relative;
+        bottom: -225px;
+    }
+    .divCardHeader,
+    .tagsDiv {
+        width: 97%;
+    }
+    .DivByTheWay1,
+    .DivByTheWay2 {
+        max-width: 97%;
     }
 }

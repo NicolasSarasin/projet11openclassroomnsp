@@ -22,7 +22,10 @@ function App() {
             <p className="pmain">Chez vous, partout et ailleurs</p>
             <div className="mainDIV">
                 {data.map((apartment) => (
-                    <Link to={`/${apartment.id}`} key={apartment.id}>
+                    <Link
+                        to={`/${apartment.id}`}
+                        key={"apartment" + apartment.id}
+                    >
                         <div
                             className="cartMainDiv"
                             style={{
