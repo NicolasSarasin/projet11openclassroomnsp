@@ -25,6 +25,7 @@ function App() {
                     <Link
                         to={`/${apartment.id}`}
                         key={"apartment" + apartment.id}
+                        className="LinkCard"
                     >
                         <div
                             className="cartMainDiv"

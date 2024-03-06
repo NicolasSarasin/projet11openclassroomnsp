@@ -50,14 +50,18 @@ body {
     max-width: 99%;
     border-radius: 25px;
     margin: 25px 25px 0px 25px;
-    padding-left: 14%;
     padding-bottom: 25px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 20px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    /*grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;*/
+}
+.LinkCard {
+    flex: 1 1 30%;
+    margin: 0px 30px 0px 30px;
 }
 .cartMainDiv {
-    width: 340px;
     height: 340px;
     background-position: center;
     margin-top: 25px;
@@ -287,9 +291,9 @@ body {
     }
     .mainDIV {
         display: flex;
-        flex-wrap: wrap;
         justify-content: center;
-        margin: 0px 40px 0px 25px;
+        flex-wrap: wrap;
+        margin: 0px 25px 0px 25px;
     }
     .pmain {
         margin-left: 17.5px;
@@ -298,10 +302,13 @@ body {
         padding-top: 25px;
         padding-bottom: 50px;
     }
+    .LinkCard {
+        flex: 1 1 80%;
+        margin: 0px 20px 0px 20px;
+    }
     .cartMainDiv {
-        width: 230px;
+        /*width: 230px;*/
         height: 230px;
-        margin-right: 45px;
     }
     .cartMainDiv p {
         position: relative;
@@ -359,6 +366,10 @@ body {
         width: 18px;
         height: 18px;
     }
+    .ImageMain {
+        width: 92%;
+        margin-right: 5px;
+    }
     .footerKasa .plow24p {
         font-size: 12px;
     }
@@ -369,7 +380,7 @@ body {
     }
     .mainDIV {
         margin-left: 25px;
-        padding-left: 3.5%;
+        gap: 10%;
     }
     .CarouselImageCard {
         width: 97%;
