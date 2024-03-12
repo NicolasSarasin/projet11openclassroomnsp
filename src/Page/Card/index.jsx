@@ -6,7 +6,7 @@ import Footer from "../Header_footer/Footer.jsx";
 import data from "../../Assets/test.json";
 import { useParams } from "react-router-dom";
 import Rating from "../Rating/rating.jsx";
-//import  Carousel from "../Carousel/carousel.jsx";
+import Carousel from "../Carousel/carousel.jsx";
 /*<Carousel></Carousel>*/
 /*import React from "react";
 import ReactDOM from "react-dom/client";*/
@@ -39,20 +39,6 @@ function Card() {
     const { id } = useParams();
     const navigate = useNavigate();
     const [apartment, setApartment] = useState(null);
-    const [pictureIndex, setPictureIndex] = useState(0);
-
-    const imageNext = () => {
-        //let pCarousel = document.getElementById("pCarousel");
-        setPictureIndex((pictureIndex + 1) % apartment.pictures.length);
-    };
-
-    const imagePrevious = () => {
-        //let pCarousel = document.getElementById("pCarousel");
-        setPictureIndex(
-            (pictureIndex + apartment.pictures.length - 1) %
-                apartment.pictures.length
-        );
-    };
     useEffect(() => {
         const foundApartment = data.find((item) => item.id === id);
         if (foundApartment === undefined) {
@@ -69,38 +55,7 @@ function Card() {
         <div className="App">
             <Header />
             {/*apartment.pictures=1?(<img src={apartment.picture} alt="imageCard" />):(<img src={apartment.pictures} alt="imageCard" />)*/}
-            <div
-                className="CarouselImageCard"
-                style={{
-                    backgroundImage: `url(${apartment.pictures[pictureIndex]})`,
-                }}
-            >
-                <i
-                    key={"pervious_icon"}
-                    className="iconCarrouselPrevious"
-                    onClick={imagePrevious}
-                >
-                    <img
-                        src="./image/arrow_back_ios-24px 1.png"
-                        alt="leftArrow"
-                        id="previousImage"
-                    />
-                </i>
-                <i
-                    key={"next_icon"}
-                    className="iconCarrouselNext"
-                    onClick={imageNext}
-                >
-                    <img
-                        src="./image/arrow_forward_ios-24px 1.png"
-                        alt="rightArrow"
-                        id="nextImage"
-                    />
-                </i>
-                <p className="pCarousel" id="pCarousel">
-                    {pictureIndex + 1}/{apartment.pictures.length}
-                </p>
-            </div>
+            <Carousel />
             <div className="divCardHeader">
                 <div>
                     <h2>{apartment.title}</h2>
