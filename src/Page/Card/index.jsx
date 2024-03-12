@@ -5,8 +5,9 @@ import Header from "../Header_footer/Header.jsx";
 import Footer from "../Header_footer/Footer.jsx";
 import data from "../../Assets/test.json";
 import { useParams } from "react-router-dom";
-/*import { Carousel } from "react-responsive-carousel";
-<Carousel></Carousel>*/
+import Rating from "../Rating/rating.jsx";
+//import  Carousel from "../Carousel/carousel.jsx";
+/*<Carousel></Carousel>*/
 /*import React from "react";
 import ReactDOM from "react-dom/client";*/
 //import "@fortawesome/fontawesome-free/css/all.min.css";
@@ -122,73 +123,7 @@ function Card() {
                         </p>
                     ))}
                 </div>
-                <div className=".tagsDivI">
-                    {apartment.rating >= 1 ? (
-                        <img
-                            src="./image/star-active 1.png"
-                            alt="Rating"
-                            className="Rating"
-                        />
-                    ) : (
-                        <img
-                            src="./image/star-inactive 1.png"
-                            alt="UnRating"
-                            className="UnRating"
-                        />
-                    )}
-                    {apartment.rating >= 2 ? (
-                        <img
-                            src="./image/star-active 1.png"
-                            alt="Rating"
-                            className="Rating"
-                        />
-                    ) : (
-                        <img
-                            src="./image/star-inactive 1.png"
-                            alt="UnRating"
-                            className="UnRating"
-                        />
-                    )}
-                    {apartment.rating >= 3 ? (
-                        <img
-                            src="./image/star-active 1.png"
-                            alt="Rating"
-                            className="Rating"
-                        />
-                    ) : (
-                        <img
-                            src="./image/star-inactive 1.png"
-                            alt="UnRating"
-                            className="UnRating"
-                        />
-                    )}
-                    {apartment.rating >= 4 ? (
-                        <img
-                            src="./image/star-active 1.png"
-                            alt="Rating"
-                            className="Rating"
-                        />
-                    ) : (
-                        <img
-                            src="./image/star-inactive 1.png"
-                            alt="UnRating"
-                            className="UnRating"
-                        />
-                    )}
-                    {apartment.rating >= 5 ? (
-                        <img
-                            src="./image/star-active 1.png"
-                            alt="Rating"
-                            className="Rating"
-                        />
-                    ) : (
-                        <img
-                            src="./image/star-inactive 1.png"
-                            alt="UnRating"
-                            className="UnRating"
-                        />
-                    )}
-                </div>
+                <Rating />
             </div>
             <div className="divCardDescriptionGeneral">
                 <div className="divCardDescription">
