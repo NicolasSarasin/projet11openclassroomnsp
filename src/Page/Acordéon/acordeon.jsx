@@ -9,20 +9,21 @@ const Acordeon = () => {
     const navigate = useNavigate();
     const [apartment, setApartment] = useState(null);
     const [pictureIndex, setPictureIndex] = useState(0);
-
     useEffect(() => {
         const foundApartment = data.find((item) => item.id === id);
-        if (!foundApartment) {
+        if (foundApartment === undefined) {
             navigate("/Error");
         } else {
             setApartment(foundApartment);
         }
     }, [id, navigate]);
-
+    if (!apartment) {
+        // If apartment is not found, the useEffect will handle the redirection, so you can just return null here
+        return null;
+    }
     const imageNext = () => {
         setPictureIndex((pictureIndex + 1) % apartment.pictures.length);
     };
-
     const imagePrevious = () => {
         setPictureIndex(
             (pictureIndex + apartment.pictures.length - 1) %

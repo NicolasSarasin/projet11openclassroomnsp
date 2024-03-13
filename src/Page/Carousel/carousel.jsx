@@ -3,7 +3,7 @@ import React, { useEffect, useState } from "react";
 import data from "../../Assets/test.json";
 import { useParams } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
-import Acordeon from "../Acordéon/acordeon.jsx";
+//import Acordeon from "../Acordéon/acordeon.jsx";
 function Carousel() {
     const { id } = useParams();
     const navigate = useNavigate();
@@ -22,20 +22,15 @@ function Carousel() {
         return null;
     }
     const imageNext = () => {
-        //let pCarousel = document.getElementById("pCarousel");
         setPictureIndex((pictureIndex + 1) % apartment.pictures.length);
-        <Acordeon />;
     };
-    //<Acordeon />
     const imagePrevious = () => {
-        //let pCarousel = document.getElementById("pCarousel");
         setPictureIndex(
             (pictureIndex + apartment.pictures.length - 1) %
                 apartment.pictures.length
         );
-        <Acordeon />;
     };
-
+    //<Acordeon />
     return (
         <div
             className="CarouselImageCard"
@@ -43,7 +38,6 @@ function Carousel() {
                 backgroundImage: `url(${apartment.pictures[pictureIndex]})`,
             }}
         >
-            <Acordeon />
             <i
                 key={"pervious_icon"}
                 className="iconCarrouselPrevious"
