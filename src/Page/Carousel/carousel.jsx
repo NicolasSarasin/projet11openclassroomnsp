@@ -24,16 +24,17 @@ function Carousel() {
     const imageNext = () => {
         //let pCarousel = document.getElementById("pCarousel");
         setPictureIndex((pictureIndex + 1) % apartment.pictures.length);
+        <Acordeon />;
     };
-
+    //<Acordeon />
     const imagePrevious = () => {
         //let pCarousel = document.getElementById("pCarousel");
         setPictureIndex(
             (pictureIndex + apartment.pictures.length - 1) %
                 apartment.pictures.length
         );
+        <Acordeon />;
     };
-    <Acordeon />;
     return (
         <div
             className="CarouselImageCard"

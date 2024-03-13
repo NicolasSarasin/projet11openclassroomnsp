@@ -32,5 +32,6 @@ function Acordeon() {
                 apartment.pictures.length
         );
     };
+    return { imagePrevious, imageNext };
 }
 export default Acordeon;
