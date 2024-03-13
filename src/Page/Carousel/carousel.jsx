@@ -35,6 +35,7 @@ function Carousel() {
         );
         <Acordeon />;
     };
+
     return (
         <div
             className="CarouselImageCard"
@@ -42,6 +43,7 @@ function Carousel() {
                 backgroundImage: `url(${apartment.pictures[pictureIndex]})`,
             }}
         >
+            <Acordeon />
             <i
                 key={"pervious_icon"}
                 className="iconCarrouselPrevious"

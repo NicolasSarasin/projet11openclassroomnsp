@@ -7,10 +7,6 @@ import data from "../../Assets/test.json";
 import { useParams } from "react-router-dom";
 import Rating from "../Rating/rating.jsx";
 import Carousel from "../Carousel/carousel.jsx";
-/*<Carousel></Carousel>*/
-/*import React from "react";
-import ReactDOM from "react-dom/client";*/
-//import "@fortawesome/fontawesome-free/css/all.min.css";
 function display(eltid, iconId) {
     const displayDiv = document.getElementById(eltid);
     const Icon = document.getElementById(iconId);
