@@ -194,10 +194,11 @@ body {
     position: relative;
     bottom: -600px;
 }
+.iconCarousel,
 .iconCarrouselPrevious,
 .iconCarrouselNext {
     position: relative;
-    bottom: -45%;
+    bottom: -40%;
 }
 .iconCarrouselPrevious {
     right: 45%;
@@ -369,6 +370,9 @@ body {
     .ImageMain {
         width: 92%;
         margin-right: 5px;
+    }
+    .error404 {
+        font-size: 230px;
     }
     .footerKasa .plow24p {
         font-size: 12px;
