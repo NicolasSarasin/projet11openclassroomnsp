@@ -58,6 +58,7 @@ body {
     gap: 20px;*/
 }
 .LinkCard {
+    text-decoration: none;
     flex: 1 1 30%;
     margin: 0px 30px 0px 30px;
 }
@@ -88,8 +89,8 @@ body {
     font-size: 36px;
 }
 .Perror4042 {
-    font-size: 18px;
     text-decoration: none;
+    font-size: 18px;
 }
 .divCardHeader {
     width: 98%;
@@ -372,7 +373,7 @@ body {
         margin-right: 5px;
     }
     .error404 {
-        font-size: 230px;
+        font-size: 200px;
     }
     .footerKasa .plow24p {
         font-size: 12px;
