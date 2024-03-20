@@ -1,27 +1,15 @@
 import "../../style.css";
-import React, { useEffect, useState } from "react";
-import data from "../../Assets/test.json";
-import { useParams } from "react-router-dom";
+import React from "react";
 import { useNavigate } from "react-router-dom";
-function Rating() {
-    const { id } = useParams();
+function Rating(props) {
+    const rating = props.rating;
     const navigate = useNavigate();
-    const [apartment, setApartment] = useState(null);
-    useEffect(() => {
-        const foundApartment = data.find((item) => item.id === id);
-        if (foundApartment === undefined) {
-            navigate("/Error");
-        } else {
-            setApartment(foundApartment);
-        }
-    }, [id, navigate]);
-    if (!apartment) {
-        // If apartment is not found, the useEffect will handle the redirection, so you can just return null here
-        return null;
+    if (rating === undefined) {
+        navigate("/Error");
     }
     return (
         <div className=".tagsDivI">
-            {apartment.rating >= 1 ? (
+            {rating >= 1 ? (
                 <img
                     src="./image/star-active 1.png"
                     alt="Rating"
@@ -34,7 +22,7 @@ function Rating() {
                     className="UnRating"
                 />
             )}
-            {apartment.rating >= 2 ? (
+            {rating >= 2 ? (
                 <img
                     src="./image/star-active 1.png"
                     alt="Rating"
@@ -47,7 +35,7 @@ function Rating() {
                     className="UnRating"
                 />
             )}
-            {apartment.rating >= 3 ? (
+            {rating >= 3 ? (
                 <img
                     src="./image/star-active 1.png"
                     alt="Rating"
@@ -60,7 +48,7 @@ function Rating() {
                     className="UnRating"
                 />
             )}
-            {apartment.rating >= 4 ? (
+            {rating >= 4 ? (
                 <img
                     src="./image/star-active 1.png"
                     alt="Rating"
@@ -73,7 +61,7 @@ function Rating() {
                     className="UnRating"
                 />
             )}
-            {apartment.rating >= 5 ? (
+            {rating >= 5 ? (
                 <img
                     src="./image/star-active 1.png"
                     alt="Rating"

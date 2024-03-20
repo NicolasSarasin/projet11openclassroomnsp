@@ -51,7 +51,7 @@ function Card() {
         <div className="App">
             <Header />
             {/*apartment.pictures=1?(<img src={apartment.picture} alt="imageCard" />):(<img src={apartment.pictures} alt="imageCard" />)*/}
-            <Carousel />
+            <Carousel pictures={apartment.pictures} />
             <div className="divCardHeader">
                 <div>
                     <h2>{apartment.title}</h2>
@@ -74,7 +74,7 @@ function Card() {
                         </p>
                     ))}
                 </div>
-                <Rating />
+                <Rating rating={apartment.rating} />
             </div>
             <div className="divCardDescriptionGeneral">
                 <div className="divCardDescription">

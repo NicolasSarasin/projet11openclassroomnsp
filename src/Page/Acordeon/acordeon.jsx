@@ -35,32 +35,58 @@ function Acordeon() {
     if (!apartment) {
         return null;
     }
-    return (
-        <div className="iconCarousel">
-            <i
-                key={"pervious_icon"}
-                className="iconCarrouselPrevious"
-                onClick={imagePrevious}
-            >
-                <img
-                    src="./image/arrow_back_ios-24px 1.png"
-                    alt="leftArrow"
-                    id="previousImage"
-                />
-            </i>
-            <i
-                key={"next_icon"}
-                className="iconCarrouselNext"
-                onClick={imageNext}
-            >
-                <img
-                    src="./image/arrow_forward_ios-24px 1.png"
-                    alt="rightArrow"
-                    id="nextImage"
-                />
-            </i>
-        </div>
-    );
+    /*return (
+        <div className="divCardDescriptionGeneral">
+                <div className="divCardDescription">
+                    <div className="divCardDescription1">
+                        <h2>Description</h2>
+                        <i
+                            className="iconDescription"
+                            id="LocationIcon"
+                            onClick={() =>
+                                display("locationDetails", "LocationIcon")
+                            }
+                        >
+                            <img
+                                src="./image/arrow_back_ios-24px 2.png"
+                                alt="arrow"
+                            />
+                        </i>
+                    </div>
+                    <div
+                        id="locationDetails"
+                        className="divCardDescriptionUnder"
+                    >
+                        <p>{apartment.description}</p>
+                    </div>
+                </div>
+                <div className="divCardDescription">
+                    <div className="divCardDescription1">
+                        <h2>Équipements</h2>
+                        <i
+                            className="iconDescription"
+                            id="EquipmentIcon"
+                            onClick={() =>
+                                display("EquipmentDetails", "EquipmentIcon")
+                            }
+                        >
+                            <img
+                                src="./image/arrow_back_ios-24px 2.png"
+                                alt="arrow"
+                            />
+                        </i>
+                    </div>
+                    <div
+                        id="EquipmentDetails"
+                        className="divCardDescriptionUnder"
+                    >
+                        {apartment.equipments.map((equipment, index) => (
+                            <p key={"equipment" + index}>{equipment}</p>
+                        ))}
+                    </div>
+                </div>
+            </div>
+    );*/
 }
 
 export default Acordeon;
