@@ -7,6 +7,7 @@ import data from "../../Assets/test.json";
 import { useParams } from "react-router-dom";
 import Rating from "../Rating/rating.jsx";
 import Carousel from "../Carousel/carousel.jsx";
+//import Acordeon from "../Acordeon/acordeon.jsx";
 function display(eltid, iconId) {
     const displayDiv = document.getElementById(eltid);
     const Icon = document.getElementById(iconId);
@@ -76,6 +77,10 @@ function Card() {
                 </div>
                 <Rating rating={apartment.rating} />
             </div>
+            {/*<Acordeon
+                acordeon1={apartment.description}
+                acordeon2={apartment.equipments}
+            />*/}
             <div className="divCardDescriptionGeneral">
                 <div className="divCardDescription">
                     <div className="divCardDescription1">

@@ -26,14 +26,12 @@ function display(eltid, iconId) {
     }
 }
 
-function Acordeon(props1, props2) {
-    const acordeon1 = props1.description;
-    const acordeon2 = props2.equipments;
+function Acordeon(props) {
+    const { acordeon1, acordeon2 } = props;
+    /*acordeon1=props.description;
+    acordeon2=props.equipments;*/
     const navigate = useNavigate();
-    if (acordeon1 === undefined) {
-        navigate("/Error");
-    }
-    if (acordeon2 === undefined) {
+    if (acordeon1 === undefined || acordeon2 === undefined) {
         navigate("/Error");
     }
     // If apartment is not found, the useEffect will handle the redirection, so you can just return null here
@@ -57,7 +55,7 @@ function Acordeon(props1, props2) {
                     </i>
                 </div>
                 <div id="locationDetails" className="divCardDescriptionUnder">
-                    <p>{acordeon1}</p>
+                    <p>{acordeon1.description}</p>
                 </div>
             </div>
             <div className="divCardDescription">
@@ -77,7 +75,7 @@ function Acordeon(props1, props2) {
                     </i>
                 </div>
                 <div id="EquipmentDetails" className="divCardDescriptionUnder">
-                    {acordeon2.map((equipment, index) => (
+                    {acordeon2.equipments.map((equipment, index) => (
                         <p key={"equipment" + index}>{equipment}</p>
                     ))}
                 </div>
