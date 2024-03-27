@@ -7,30 +7,7 @@ import data from "../../Assets/test.json";
 import { useParams } from "react-router-dom";
 import Rating from "../Rating/rating.jsx";
 import Carousel from "../Carousel/carousel.jsx";
-//import Acordeon from "../Acordeon/acordeon.jsx";
-function display(eltid, iconId) {
-    const displayDiv = document.getElementById(eltid);
-    const Icon = document.getElementById(iconId);
-    //const iconAlternate="";
-    console.log("Button Clicked");
-    //switch case with display css in jsx
-    //displayDiv.style.display="none";
-    switch (displayDiv.style.display) {
-        case "block":
-            displayDiv.style.display = "";
-            displayDiv.style.transform = "translateY(0px)";
-            displayDiv.style.animation = "none 1s";
-            Icon.style.transform = "rotate(0deg)";
-            Icon.style.marginTop = "17.5px";
-            break;
-        default:
-            displayDiv.style.display = "block";
-            displayDiv.style.transform = "translateY(2.5px)";
-            displayDiv.style.animation = "block 1s";
-            Icon.style.transform = "rotate(180deg)";
-            Icon.style.marginBottom = "17.5px";
-    }
-}
+import Acordeon from "../Acordeon/acordeon.jsx";
 
 function Card() {
     const { id } = useParams();
@@ -77,59 +54,19 @@ function Card() {
                 </div>
                 <Rating rating={apartment.rating} />
             </div>
-            {/*<Acordeon
-                acordeon1={apartment.description}
-                acordeon2={apartment.equipments}
-            />*/}
             <div className="divCardDescriptionGeneral">
-                <div className="divCardDescription">
-                    <div className="divCardDescription1">
-                        <h2>Description</h2>
-                        <i
-                            className="iconDescription"
-                            id="LocationIcon"
-                            onClick={() =>
-                                display("locationDetails", "LocationIcon")
-                            }
-                        >
-                            <img
-                                src="./image/arrow_back_ios-24px 2.png"
-                                alt="arrow"
-                            />
-                        </i>
-                    </div>
-                    <div
-                        id="locationDetails"
-                        className="divCardDescriptionUnder"
-                    >
-                        <p>{apartment.description}</p>
-                    </div>
-                </div>
-                <div className="divCardDescription">
-                    <div className="divCardDescription1">
-                        <h2>Équipements</h2>
-                        <i
-                            className="iconDescription"
-                            id="EquipmentIcon"
-                            onClick={() =>
-                                display("EquipmentDetails", "EquipmentIcon")
-                            }
-                        >
-                            <img
-                                src="./image/arrow_back_ios-24px 2.png"
-                                alt="arrow"
-                            />
-                        </i>
-                    </div>
-                    <div
-                        id="EquipmentDetails"
-                        className="divCardDescriptionUnder"
-                    >
-                        {apartment.equipments.map((equipment, index) => (
-                            <p key={"equipment" + index}>{equipment}</p>
-                        ))}
-                    </div>
-                </div>
+                <Acordeon
+                    id="description"
+                    title="Description"
+                    details={apartment.description}
+                />
+                <Acordeon
+                    id="equipments"
+                    title="Equipments"
+                    details={
+                        "<p>" + apartment.equipments.join("</p><p>") + "</p>"
+                    }
+                />
             </div>
             <Footer />
         </div>

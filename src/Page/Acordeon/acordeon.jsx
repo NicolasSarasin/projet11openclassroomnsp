@@ -1,14 +1,11 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 
 import "../../style.css";
+
 function display(eltid, iconId) {
     const displayDiv = document.getElementById(eltid);
     const Icon = document.getElementById(iconId);
-    //const iconAlternate="";
-    console.log("Button Clicked");
     //switch case with display css in jsx
-    //displayDiv.style.display="none";
     switch (displayDiv.style.display) {
         case "block":
             displayDiv.style.display = "";
@@ -27,26 +24,27 @@ function display(eltid, iconId) {
 }
 
 function Acordeon(props) {
-    const { acordeon1, acordeon2 } = props;
-    /*acordeon1=props.description;
-    acordeon2=props.equipments;*/
-    const navigate = useNavigate();
-    if (acordeon1 === undefined || acordeon2 === undefined) {
-        navigate("/Error");
+    let { id, title, details } = props;
+
+    if (id === undefined) {
+        id = "acc" + Math.floor(Math.random() * 1000000);
     }
-    // If apartment is not found, the useEffect will handle the redirection, so you can just return null here
+    if (title === undefined) {
+        title = "";
+    }
+    if (details === undefined) {
+        details = "";
+    }
 
     return (
-        <div className="divCardDescriptionGeneral">
+        <div className="divByTheWayGeneral">
             <div className="divCardDescription">
                 <div className="divCardDescription1">
-                    <h2>Description</h2>
+                    <h2>{title}</h2>
                     <i
                         className="iconDescription"
-                        id="LocationIcon"
-                        onClick={() =>
-                            display("locationDetails", "LocationIcon")
-                        }
+                        id={id + "Icon"}
+                        onClick={() => display(id + "Details", id + "Icon")}
                     >
                         <img
                             src="./image/arrow_back_ios-24px 2.png"
@@ -54,30 +52,8 @@ function Acordeon(props) {
                         />
                     </i>
                 </div>
-                <div id="locationDetails" className="divCardDescriptionUnder">
-                    <p>{acordeon1.description}</p>
-                </div>
-            </div>
-            <div className="divCardDescription">
-                <div className="divCardDescription1">
-                    <h2>Équipements</h2>
-                    <i
-                        className="iconDescription"
-                        id="EquipmentIcon"
-                        onClick={() =>
-                            display("EquipmentDetails", "EquipmentIcon")
-                        }
-                    >
-                        <img
-                            src="./image/arrow_back_ios-24px 2.png"
-                            alt="arrow"
-                        />
-                    </i>
-                </div>
-                <div id="EquipmentDetails" className="divCardDescriptionUnder">
-                    {acordeon2.equipments.map((equipment, index) => (
-                        <p key={"equipment" + index}>{equipment}</p>
-                    ))}
+                <div id={id + "Details"} className="divCardDescriptionUnder">
+                    <p dangerouslySetInnerHTML={{ __html: details }}></p>
                 </div>
             </div>
         </div>
