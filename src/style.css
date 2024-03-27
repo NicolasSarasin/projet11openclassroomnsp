@@ -99,14 +99,27 @@ body {
     justify-content: space-between;
     color: #ff6060;
 }
+
+.divByTheWayGeneral {
+    width: 98%;
+    margin-left: 25px;
+}
+
+.divByTheWayGeneral .divCardDescription,
+.divByTheWayGeneral .divCardDescription1 {
+    width: 100%;
+}
+
 .divCardDescriptionGeneral {
     display: flex;
     justify-content: space-around;
 }
+
 .divCardDescription {
     text-align: left;
     padding: 0.25px 0.25px 0.25px 0px;
     width: 48%;
+    margin-bottom: 25px;
 }
 .divCardDescription1 {
     background-color: #ff6060;
