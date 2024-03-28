@@ -13,8 +13,8 @@ function Error() {
             <p className="Perror404">
                 Oups! La page que vous voulez n'existe pas.
             </p>
-            <Link to="/">
-                <p className="Perror4042">Retourner à la page d'accueil.</p>
+            <Link to="/" className="Perror4042">
+                <p>Retourner à la page d'accueil.</p>
             </Link>
             <Footer />
         </div>

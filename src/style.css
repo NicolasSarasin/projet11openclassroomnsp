@@ -110,15 +110,19 @@ body {
     width: 100%;
 }
 
+.divByTheWayGeneral .divCardDescription {
+    margin-bottom: 25px;
+}
+
 .divCardDescriptionGeneral {
     display: flex;
     justify-content: space-around;
 }
 
-.divCardDescription {
+.divCardDescriptionGeneral .divByTheWayGeneral .divCardDescription {
     text-align: left;
     padding: 0.25px 0.25px 0.25px 0px;
-    width: 48%;
+    width: 98%;
     margin-bottom: 25px;
 }
 .divCardDescription1 {
@@ -141,6 +145,7 @@ body {
 }
 .divCardDescriptionUnder {
     display: none;
+    text-align: left;
     transform: translateY(0px);
     background-color: #f6f6f6;
     color: #ff6060;
@@ -387,6 +392,10 @@ body {
     }
     .error404 {
         font-size: 200px;
+    }
+    .divByTheWayGeneral {
+        width: 92%;
+        margin-left: 12.5px;
     }
     .footerKasa .plow24p {
         font-size: 12px;
