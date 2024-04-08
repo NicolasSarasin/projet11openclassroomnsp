@@ -1,13 +1,13 @@
 import "../../style.css";
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import Header from "../Header_footer/Header.jsx";
-import Footer from "../Header_footer/Footer.jsx";
+import Header from "../../Components/Header_footer/Header.jsx";
+import Footer from "../../Components/Header_footer/Footer.jsx";
 import data from "../../Assets/test.json";
 import { useParams } from "react-router-dom";
-import Rating from "../Rating/rating.jsx";
-import Carousel from "../Carousel/carousel.jsx";
-import Acordeon from "../Acordeon/acordeon.jsx";
+import Rating from "../../Components/Rating/rating.jsx";
+import Carousel from "../../Components/Carousel/carousel.jsx";
+import Acordeon from "../../Components/Acordeon/acordeon.jsx";
 
 function Card() {
     const { id } = useParams();

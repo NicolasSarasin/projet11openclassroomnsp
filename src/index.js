@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import "./index.css";
 import App from "./App";
-import Index from "./index.jsx";
+import About from "./about.jsx";
 import Error from "./Page/Error_404/index.jsx";
 import Card from "./Page/Card/index.jsx";
 import reportWebVitals from "./reportWebVitals";
@@ -16,7 +16,7 @@ root.render(
         <Router>
             <Routes>
                 <Route path="/" element={<App />} />
-                <Route path="/ByTheWay" element={<Index />} />
+                <Route path="/About" element={<About />} />
                 <Route path="/:id" element={<Card />} />
                 <Route path="/Error" element={<Error />} />
                 <Route path="*" element={<Error />} />
