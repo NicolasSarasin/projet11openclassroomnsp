@@ -376,6 +376,16 @@ body {
         position: relative;
         bottom: -225px;
     }
+    .divCardHeader {
+        display: block;
+        text-align: left;
+        padding-left: 7.5px;
+    }
+    .HostAndRating {
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
     .divCardHeader,
     .tagsDiv {
         margin-left: 0px;
@@ -383,11 +393,13 @@ body {
     }
     .pictureHost {
         margin-left: 5px;
+        margin-right: 5px;
     }
     .Rating,
     .UnRating {
         width: 18px;
         height: 18px;
+        margin-top: 17.5px;
     }
     .ImageMain {
         width: 92%;

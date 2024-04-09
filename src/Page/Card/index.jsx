@@ -42,7 +42,7 @@ function Card() {
                         ))}
                     </div>
                 </div>
-                <div>
+                <div className="HostAndRating">
                     <div className="nameHostApartment">
                         <p className="nameHost">{apartment.host.name}</p>
                         <img
