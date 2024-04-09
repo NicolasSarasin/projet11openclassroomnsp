@@ -34,6 +34,30 @@ function Card() {
                 <div>
                     <h2>{apartment.title}</h2>
                     <p className="pLocation">{apartment.location}</p>
+                    <div className="tagsDivP">
+                        {apartment.tags.map((tag, index) => (
+                            <p className="tagDivP" key={"tag" + index}>
+                                {tag}
+                            </p>
+                        ))}
+                    </div>
+                </div>
+                <div>
+                    <div className="nameHostApartment">
+                        <p className="nameHost">{apartment.host.name}</p>
+                        <img
+                            src={apartment.host.picture}
+                            alt="imageCard"
+                            className="pictureHost"
+                        />
+                    </div>
+                    <Rating rating={apartment.rating} />
+                </div>
+            </div>
+            {/*<div className="divCardHeader">
+                <div>
+                    <h2>{apartment.title}</h2>
+                    <p className="pLocation">{apartment.location}</p>
                 </div>
                 <div className="nameHostApartment">
                     <p className="nameHost">{apartment.host.name}</p>
@@ -53,7 +77,7 @@ function Card() {
                     ))}
                 </div>
                 <Rating rating={apartment.rating} />
-            </div>
+            </div>*/}
             <div className="divCardDescriptionGeneral">
                 <Acordeon
                     id="description"

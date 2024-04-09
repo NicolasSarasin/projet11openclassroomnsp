@@ -99,7 +99,9 @@ body {
     justify-content: space-between;
     color: #ff6060;
 }
-
+.divCardHeader .tagDivP {
+    color: white;
+}
 .divByTheWayGeneral {
     width: 98%;
     margin-left: 25px;
@@ -194,6 +196,7 @@ body {
 }
 .nameHostApartment {
     display: flex;
+    margin-bottom: 45px;
     /*justify-content: space-around;*/
 }
 .CarouselImageCard {
@@ -353,7 +356,7 @@ body {
     .CarouselImageCard {
         width: 92%;
         height: 415px;
-        background-size: 100% 100%;
+        background-size: cover;
         margin-left: 12.5px;
     }
     .iconCarrouselPrevious,

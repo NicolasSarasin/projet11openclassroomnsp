@@ -1,7 +1,7 @@
 import "../../style.css";
 import { Link } from "react-router-dom";
-import Header from "../Header_footer/Header.jsx";
-import Footer from "../Header_footer/Footer.jsx";
+import Header from "../../Components/Header_footer/Header.jsx";
+import Footer from "../../Components/Header_footer/Footer.jsx";
 /*import React from "react";
 import ReactDOM from "react-dom/client";*/
 

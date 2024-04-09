@@ -2,8 +2,8 @@
 import "./App.css";
 import "./style.css";
 import { Link } from "react-router-dom";
-import Header from "./Page/Header_footer/Header.jsx";
-import Footer from "./Page/Header_footer/Footer.jsx";
+import Header from "./Components/Header_footer/Header.jsx";
+import Footer from "./Components/Header_footer/Footer.jsx";
 import data from "./Assets/test.json";
 //the only function
 function App() {
