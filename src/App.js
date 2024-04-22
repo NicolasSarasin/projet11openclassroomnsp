@@ -7,15 +7,6 @@ import Footer from "./Components/Header_footer/Footer.jsx";
 import data from "./Assets/test.json";
 //the only function
 function App() {
-    //let appartments = [];
-    /*getAppartments().then((data) => {
-        appartments = data;
-        console.log("data", data);
-        {data.map((apartment) => (
-                    <div key={apartment.id}>{apartment.name}</div>
-                ))}
-    });*/
-
     return (
         <div className="App">
             <Header />
