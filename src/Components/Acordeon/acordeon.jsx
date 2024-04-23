@@ -1,41 +1,30 @@
-import React from "react";
-
+import React, { useState } from "react";
 import "../../style.css";
 
-function display(eltid, iconId) {
-    const displayDiv = document.getElementById(eltid);
-    const Icon = document.getElementById(iconId);
-    //switch case with display css in jsx
-    switch (displayDiv.style.display) {
-        case "block":
+function Acordeon(props) {
+    const { id, title, details } = props;
+    const [isDetailsVisible, setIsDetailsVisible] = useState(false);
+
+    const toggleDetails = () => {
+        const displayDiv = document.getElementById(id + "Details");
+        const Icon = document.getElementById(id + "Icon");
+
+        if (isDetailsVisible) {
             displayDiv.style.display = "";
             displayDiv.style.transform = "translateY(0px)";
             displayDiv.style.animation = "none 1s";
             Icon.style.transform = "rotate(0deg)";
-            Icon.style.marginTop = "17.5px";
-            break;
-        default:
+            Icon.style.marginTop = "10px";
+        } else {
             displayDiv.style.display = "block";
             displayDiv.style.transform = "translateY(2.5px)";
             displayDiv.style.animation = "block 1s";
             Icon.style.transform = "rotate(180deg)";
-            Icon.style.marginBottom = "17.5px";
-    }
-}
+            Icon.style.marginBottom = "10px";
+        }
 
-function Acordeon(props) {
-    let { id, title, details } = props;
-
-    if (id === undefined) {
-        id = "acc" + Math.floor(Math.random() * 1000000);
-    }
-    if (title === undefined) {
-        title = "";
-    }
-    if (details === undefined) {
-        details = "";
-    }
-
+        setIsDetailsVisible(!isDetailsVisible);
+    };
     return (
         <div className="divByTheWayGeneral">
             <div className="divCardDescription">
@@ -44,7 +33,9 @@ function Acordeon(props) {
                     <i
                         className="iconDescription"
                         id={id + "Icon"}
-                        onClick={() => display(id + "Details", id + "Icon")}
+                        onClick={() =>
+                            toggleDetails(id + "Details", id + "Icon")
+                        }
                     >
                         <img
                             src="./image/arrow_back_ios-24px 2.png"
