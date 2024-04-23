@@ -138,9 +138,13 @@ body {
     justify-content: space-between;
 }
 .iconDescription {
-    margin-top: 17.5px;
     margin-right: 15px;
-    /*transform: rotate(0deg);*/
+    margin-top: 17px;
+    transition: transform 0.5s;
+    height: 35px;
+}
+.iconRotate {
+    transform: rotate(180deg);
 }
 .divCardDescription h2 {
     margin-left: 15px;
@@ -158,6 +162,11 @@ body {
     padding: 0.25px 0.25px 0.25px 0.25px;
     padding-left: 15px;
     border-radius: 7.5px;
+}
+.divCardDescriptionUnderRotate {
+    display: block;
+    transform: translateY(3px);
+    animation: block 1s;
 }
 .pLocation {
     margin-top: -15px;
