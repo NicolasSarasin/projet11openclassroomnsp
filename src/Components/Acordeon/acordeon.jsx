@@ -6,23 +6,6 @@ function Acordeon(props) {
     const [isDetailsVisible, setIsDetailsVisible] = useState(false);
 
     const toggleDetails = () => {
-        const displayDiv = document.getElementById(id + "Details");
-        const Icon = document.getElementById(id + "Icon");
-
-        if (isDetailsVisible) {
-            displayDiv.style.display = "";
-            displayDiv.style.transform = "translateY(0px)";
-            displayDiv.style.animation = "none 1s";
-            Icon.style.transform = "rotate(0deg)";
-            Icon.style.marginTop = "10px";
-        } else {
-            displayDiv.style.display = "block";
-            displayDiv.style.transform = "translateY(2.5px)";
-            displayDiv.style.animation = "block 1s";
-            Icon.style.transform = "rotate(180deg)";
-            Icon.style.marginBottom = "10px";
-        }
-
         setIsDetailsVisible(!isDetailsVisible);
     };
     return (
@@ -31,7 +14,10 @@ function Acordeon(props) {
                 <div className="divCardDescription1">
                     <h2>{title}</h2>
                     <i
-                        className="iconDescription"
+                        className={
+                            "iconDescription" +
+                            (isDetailsVisible ? " iconRotate" : "")
+                        }
                         id={id + "Icon"}
                         onClick={() =>
                             toggleDetails(id + "Details", id + "Icon")
@@ -43,7 +29,15 @@ function Acordeon(props) {
                         />
                     </i>
                 </div>
-                <div id={id + "Details"} className="divCardDescriptionUnder">
+                <div
+                    id={id + "Details"}
+                    className={
+                        "divCardDescriptionUnder" +
+                        (isDetailsVisible
+                            ? " divCardDescriptionUnderRotate"
+                            : "")
+                    }
+                >
                     <p dangerouslySetInnerHTML={{ __html: details }}></p>
                 </div>
             </div>
